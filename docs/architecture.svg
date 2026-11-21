@@ -58,7 +58,7 @@
   <text class="head" x="620" y="84">lib/ modules</text>
   <rect class="ticket" x="612" y="94" width="270" height="51"/>
   <text class="head" x="625" y="116">lib/invoice.js</text>
-  <text class="small" x="625" y="135">computeInvoiceFigures · render · ticket 1</text>
+  <text class="small" x="625" y="135">computeInvoiceFigures → pricing.computeTotals</text>
   <rect class="module" x="612" y="151" width="270" height="37"/>
   <text class="body" x="625" y="175">lib/pricing.js — checkout totals</text>
   <rect class="module" x="612" y="194" width="270" height="37"/>
@@ -144,5 +144,5 @@
   <path class="line" d="M756 643 H776"/><path class="line" d="M942 643 H962"/>
   <rect x="32" y="724" width="1134" height="48" rx="8" fill="#f0fdf4" stroke="#86efac"/>
   <text class="body" x="49" y="746"><tspan font-weight="700">Invoice route:</tspan> GET /orders/:id/invoice → store.read() → orders.get() → invoice.render() → invoice.computeInvoiceFigures()</text>
-  <text class="small" x="49" y="765">Ticket 1: invoice currently recomputes checkout totals on a separate path; lib/invoice.js is highlighted above.</text>
+  <text class="small" x="49" y="765">Ticket 1: invoice now reuses pricing.computeTotals for HSN slabs, coupon discount, GST and total; lib/invoice.js is highlighted.</text>
 </svg>
